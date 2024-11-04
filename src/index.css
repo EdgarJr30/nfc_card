@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* */
+/* BASE
+/* */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*  h-[200vh] No es necesario */
+
+/* body {
+    @apply bg-zinc-900 text-zinc-50
+} */

@@ -1,4 +1,4 @@
-import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
+// import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
 
 type Project = {
     name: string;

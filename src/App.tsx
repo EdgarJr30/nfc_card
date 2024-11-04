@@ -1,7 +1,7 @@
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Links from "./components/Links"
-import Navbar from "./components/Navbar"
+// import Navbar from "./components/Navbar"
 
 const App = () => {
   return (

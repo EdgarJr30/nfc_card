@@ -29,10 +29,10 @@ const socialMediaMap: { [key: string]: { logoUrl: string; bgColor: string } } = 
 };
 
 const projects: Project[] = [
-    { name: 'Facebook ', href: '#', members: 16 },
-    { name: 'Twitter', href: '#' },
-    { name: 'Instagram', href: '#' },
-    { name: 'Linkedin', href: '#' },
+    { name: 'Facebook ', href: 'https://www.facebook.com/', members: 16 },
+    { name: 'Twitter', href: 'https://www.x.com/' },
+    { name: 'Instagram', href: 'https://www.instagram.com/' },
+    { name: 'Linkedin', href: 'https://www.linkedin.com/' },
 ];
 
 function classNames(...classes: string[]) {

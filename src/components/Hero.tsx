@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faEnvelope, faArrowUpFromBracket, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const people = [

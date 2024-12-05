@@ -112,12 +112,12 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                     >
                                         <FontAwesomeIcon icon={faWhatsapp} />
                                     </a>
-                                    <a
+                                    {/* <a
                                         href="#"
                                         className="hover:text-blue-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"
                                     >
                                         <FontAwesomeIcon icon={faLinkedin} />
-                                    </a>
+                                    </a> */}
                                     <a
                                         href="#"
                                         className="hover:text-pink-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"

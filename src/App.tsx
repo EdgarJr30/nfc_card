@@ -27,6 +27,7 @@ const App = () => {
     }, 300); // El tiempo debe coincidir con la duración de la animación
 
     return () => clearTimeout(timeout);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab]);
 
   const getContent = () => {

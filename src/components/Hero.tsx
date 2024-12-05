@@ -141,7 +141,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                         {tabs.map((tab) => (
                                             <button
                                                 key={tab.name}
-                                                onClick={() => setActiveTab(tab.name)}
+                                                onClick={() => handleTabClick(tab.name)}
                                                 className={classNames(
                                                     activeTab === tab.name
                                                         ? "bg-gray-700 text-gray-300"

@@ -1,5 +1,11 @@
+interface LinksCardProps {
+    logo: string;
+    title: string;
+    link: string;
+    pdfLink: string;
+  }
 
-const LinksCard = ({ logo, title, link, pdfLink }) => {
+const LinksCard: React.FC<LinksCardProps> = ({ logo, title, link, pdfLink }) => {
     return (
         <a href={pdfLink} target="_blank" rel="noopener noreferrer">
             <div

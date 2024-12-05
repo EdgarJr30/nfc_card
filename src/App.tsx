@@ -3,9 +3,17 @@ import Hero from "./components/Hero";
 import LinksCard from "./components/LinksCard";
 import Footer from "./components/Footer";
 
+interface Content {
+  logo: string;
+  title: string;
+  link: string;
+  pdfLink: string;
+}
+
 const App = () => {
+ 
   const [activeTab, setActiveTab] = useState("Servicios");
-  const [content, setContent] = useState([]);
+  const [content, setContent] = useState<Content[]>([]);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -79,7 +87,7 @@ const App = () => {
           }`}
       >
         {content.map((item, index) => (
-          <LinksCard key={`${activeTab}-${index}`} {...item} />
+          <LinksCard key={`${activeTab}-${index}`} {...item as Content} />
         ))}
       </div>
       <Footer />

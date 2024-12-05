@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faEnvelope, faArrowUpFromBracket, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import LanguageSelector from './LanguageSelector ';
 
 const people = [
     {
@@ -21,7 +20,13 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-const Hero = ({ setActiveTab, activeTab }) => {
+interface HeroProps {
+    setActiveTab: (tab: string) => void;
+    activeTab: string;
+}
+
+
+const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
 
     // Estado controlado para los tabs
     const [tabs, setTabs] = useState([
@@ -31,7 +36,7 @@ const Hero = ({ setActiveTab, activeTab }) => {
     ]);
 
     // Manejador para cambiar el tab activo
-    const handleTabClick = (tabName) => {
+    const handleTabClick = (tabName: string): void => {
         setTabs((prevTabs) =>
             prevTabs.map((tab) => ({
                 ...tab,
@@ -42,7 +47,7 @@ const Hero = ({ setActiveTab, activeTab }) => {
     };
 
     // Función de compartir
-    const handleShare = (e) => {
+    const handleShare = (e: React.MouseEvent<HTMLAnchorElement>): void => {
         e.preventDefault();
         if (navigator.share) {
             navigator.share({

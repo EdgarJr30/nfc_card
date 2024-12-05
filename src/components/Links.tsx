@@ -1,5 +1,3 @@
-import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
-
 type Project = {
     name: string;
     href: string;

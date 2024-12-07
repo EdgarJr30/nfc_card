@@ -5,13 +5,13 @@ import { faGlobe, faEnvelope, faArrowUpFromBracket, faArrowUpRightFromSquare } f
 
 const people = [
     {
-        name: 'Jane Cooper',
-        title: 'Paradigm Representative',
+        name: 'Carlos Portes Read',
+        title: 'Ingeniero Industrial - GEISA',
         role: 'Admin',
         email: 'janecooper@example.com',
         telephone: '+1-202-555-0170',
         imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+            'https://i.imgur.com/Ix0AR2l.png',
     },
     // More people...
 ];
@@ -72,7 +72,8 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                 <img
                                     alt=""
                                     src={person.imageUrl}
-                                    className="h-32 w-32 flex-shrink-0 rounded-full border-1 border-transparent bg-gradient-to-r from-[#31BF5A] to-[#004A62] p-[2px]"
+                                    className='h-32 w-32'
+                                    // className="h-32 w-32 flex-shrink-0 rounded-full border-1 border-transparent bg-gradient-to-r from-[#31BF5A] to-[#004A62] p-[2px]"
                                 />
                             </div>
                             <div className="flex space-x-3 items-center">

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faEnvelope, faArrowUpFromBracket, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const people = [
@@ -72,14 +72,14 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                 <img
                                     alt=""
                                     src={person.imageUrl}
-                                    className='h-32 w-32'
-                                    // className="h-32 w-32 flex-shrink-0 rounded-full border-1 border-transparent bg-gradient-to-r from-[#31BF5A] to-[#004A62] p-[2px]"
+                                    className='h-24 w-24'
+                                // className="h-32 w-32 flex-shrink-0 rounded-full border-1 border-transparent bg-gradient-to-r from-[#31BF5A] to-[#004A62] p-[2px]"
                                 />
                             </div>
                             <div className="flex space-x-3 items-center">
                                 <a
                                     onClick={handleShare}
-                                    className="text-gray-300 hover:text-gray-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-12 h-12 cursor-pointer"
+                                    className="text-gray-300 hover:text-gray-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8 cursor-pointer"
                                 >
                                     <FontAwesomeIcon icon={faArrowUpFromBracket} />
                                 </a>
@@ -89,7 +89,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                         </div>
 
                         <div className="mt-4">
-                            <h3 className="text-2xl font-bold pb-1">{person.name}</h3>
+                            <h3 className="text-xl font-bold pb-1">{person.name}</h3>
                             <p className="text-sm pb-2 text-gray-400">{person.title}</p>
                             <div className="flex items-center space-x-6 my-4">
                                 <a
@@ -100,35 +100,35 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                                 </a>
 
-                                <div className="flex items-center space-x-4">
+                                <div className="flex items-center space-x-2">
                                     <a
                                         href="#"
-                                        className="hover:text-yellow-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"
+                                        className="hover:text-yellow-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faGlobe} />
                                     </a>
                                     <a
                                         href="#"
-                                        className="hover:text-green-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"
+                                        className="hover:text-green-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faWhatsapp} />
                                     </a>
-                                    {/* <a
-                                        href="#"
-                                        className="hover:text-blue-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"
-                                    >
-                                        <FontAwesomeIcon icon={faLinkedin} />
-                                    </a> */}
                                     <a
                                         href="#"
-                                        className="hover:text-pink-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"
+                                        className="hover:text-blue-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
+                                    >
+                                        <FontAwesomeIcon icon={faLinkedin} />
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="hover:text-pink-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faInstagram} />
                                     </a>
 
                                     <a
                                         href="mailto:example@example.com"
-                                        className="hover:text-red-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-10 h-10"
+                                        className="hover:text-red-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faEnvelope} />
                                     </a>
@@ -138,7 +138,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                         <div className="flex justify-between font-semibold">
                             <div>
                                 <div className="rounded-full shadow-lg p-2 bg-black border border-green-700">
-                                    <nav aria-label="Tabs" className="flex space-x-6">
+                                    <nav aria-label="Tabs" className="flex space-x-1">
                                         {tabs.map((tab) => (
                                             <button
                                                 key={tab.name}
@@ -147,7 +147,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                                     activeTab === tab.name
                                                         ? "bg-gray-700 text-gray-300"
                                                         : "text-white hover:text-gray-300",
-                                                    "rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out"
+                                                    "rounded-full px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out"
                                                 )}
                                             >
                                                 {tab.name}

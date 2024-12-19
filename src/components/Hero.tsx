@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faEnvelope, faArrowUpFromBracket, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
 const people = [
     {
@@ -66,22 +67,28 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
         <div className="mx-auto text-white">
             <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-6">
                 {people.map((person) => (
-                    <li key={person.email}>
-                        <div className="flex flex-1 items-center justify-between">
+                    <div key={person.email}>
+                        {/* <li > */}
+                        <div className="flex flex-1 items-start justify-between">
                             <div className='relative'>
                                 <img
                                     alt=""
                                     src={person.imageUrl}
-                                    className='h-24 w-24'
+                                    className='h-28 w-28'
                                 // className="h-32 w-32 flex-shrink-0 rounded-full border-1 border-transparent bg-gradient-to-r from-[#31BF5A] to-[#004A62] p-[2px]"
                                 />
                             </div>
-                            <div className="flex space-x-3 items-center">
+                            <div className="flex space-x-3">
                                 <a
                                     onClick={handleShare}
-                                    className="text-gray-300 hover:text-gray-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8 cursor-pointer"
+                                    className="text-gray-300 hover:text-gray-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8 cursor-pointer"
                                 >
                                     <FontAwesomeIcon icon={faArrowUpFromBracket} />
+                                </a>
+                                <a
+                                    className="text-gray-300 hover:text-gray-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8 cursor-pointer"
+                                >
+                                    <FontAwesomeIcon icon={faMoon} />
                                 </a>
                                 {/* <LanguageSelector/> */}
                                 {/* <button className="font-bold bg-green-500 px-4 py-2 rounded">PT-BR</button> */}
@@ -89,8 +96,8 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                         </div>
 
                         <div className="mt-4">
-                            <h3 className="text-xl font-bold pb-1">{person.name}</h3>
-                            <p className="text-sm pb-2 text-gray-400">{person.title}</p>
+                            <h2 className="text-2xl font-bold pb-1">{person.name}</h2>
+                            <p className="text-md pb-2 text-gray-400">{person.title}</p>
                             <div className="flex items-center space-x-6 my-4">
                                 <a
                                     href="tel:+1234567890"
@@ -103,32 +110,32 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                 <div className="flex items-center space-x-2">
                                     <a
                                         href="#"
-                                        className="hover:text-yellow-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
+                                        className="hover:text-yellow-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faGlobe} />
                                     </a>
                                     <a
                                         href="#"
-                                        className="hover:text-green-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
+                                        className="hover:text-green-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faWhatsapp} />
                                     </a>
                                     <a
                                         href="#"
-                                        className="hover:text-blue-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
+                                        className="hover:text-blue-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faLinkedin} />
                                     </a>
                                     <a
                                         href="#"
-                                        className="hover:text-pink-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
+                                        className="hover:text-pink-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faInstagram} />
                                     </a>
 
                                     <a
                                         href="mailto:example@example.com"
-                                        className="hover:text-red-500 text-xl border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
+                                        className="hover:text-red-500 text-md border border-green-700 p-3 rounded-full flex items-center justify-center w-8 h-8"
                                     >
                                         <FontAwesomeIcon icon={faEnvelope} />
                                     </a>
@@ -147,7 +154,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                                     activeTab === tab.name
                                                         ? "bg-gray-700 text-gray-300"
                                                         : "text-white hover:text-gray-300",
-                                                    "rounded-full px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out"
+                                                    "rounded-full px-3 py-1 text-sm font-medium transition-all duration-300 ease-in-out"
                                                 )}
                                             >
                                                 {tab.name}
@@ -157,7 +164,8 @@ const Hero: React.FC<HeroProps> = ({ setActiveTab, activeTab }) => {
                                 </div>
                             </div>
                         </div>
-                    </li>
+                        {/* </li> */}
+                    </div>
                 ))}
             </ul>
         </div>

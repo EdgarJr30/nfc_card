@@ -8,6 +8,8 @@ interface Content {
   title: string;
   link: string;
   pdfLink: string;
+  shareButton?: string;
+  services?: boolean;
 }
 
 const App = () => {
@@ -35,40 +37,48 @@ const App = () => {
       case "Servicios":
         return [
           {
-            logo: "https://i.imgur.com/tNJYbpR.png",
+            logo: "https://api.iconify.design/material-symbols:water-drop.svg",
             title: "Control de Filtraciones",
             link: "Casas, edificios y corporaciones",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
+            // shareButton: "whatsapp",
+            services: true
           },
           {
-            logo: "https://i.imgur.com/BBAdP8k.png",
+            logo: "https://api.iconify.design/material-symbols:settings-outline.svg",
             title: "Ingeniería Civil",
             link: "Construcción",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
+            services: true
           },
           {
-            logo: "https://i.imgur.com/mz1RmmI.png",
+            logo: "https://api.iconify.design/bi:bricks.svg",
             title: "Ingeniería Industrial",
             link: "Instalaciones  y Mantenimiento",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
+            services: true
+
           },
           {
-            logo: "https://i.imgur.com/TK3MBO9.png",
+            logo: "https://api.iconify.design/ooui:lab-flask.svg",
             title: "Didáctica",
             link: "Diseño de Laboratorios educativos",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
+            services: true
           },
           {
-            logo: "https://i.imgur.com/vHmj5vL.png",
+            logo: "https://api.iconify.design/material-symbols:settings-outline.svg",
             title: "Termografía",
             link: "Incendios, Detección de fugas en estructuras...",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
+            services: true
           },
           {
-            logo: "https://i.imgur.com/vHmj5vL.png",
+            logo: "https://api.iconify.design/material-symbols:settings-outline.svg",
             title: "Inspecciones Subterráneas",
             link: "www.behance.com",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
+            services: true
           }
         ];
       case "Proyectos":
@@ -77,7 +87,7 @@ const App = () => {
             logo: "https://i.imgur.com/M42RUGF.png",
             title: "Suministro e Instalación de la junta de expansión del HRSG central térmica AES ANDRES",
             link: "Ingeniería Industrial",
-            pdfLink: "https://pdfobject.com/pdf/sample.pdf"
+            pdfLink: "https://pdfobject.com/pdf/sample.pdf",
           },
           {
             logo: "https://i.imgur.com/AMPGMhW.png",

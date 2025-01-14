@@ -18,7 +18,6 @@ export default {
       backgroundImage: {
         'contact-gradient': 'linear-gradient(to right, #31BF5A, #004A62)',
       },
-      
     },
   },
   plugins: [],

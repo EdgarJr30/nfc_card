@@ -3,9 +3,11 @@ interface LinksCardProps {
     title: string;
     link: string;
     pdfLink: string;
-  }
+    // shareButton?: string;
+    services?: boolean;
+}
 
-const LinksCard: React.FC<LinksCardProps> = ({ logo, title, link, pdfLink }) => {
+const LinksCard: React.FC<LinksCardProps> = ({ logo, title, link, pdfLink, services }) => {
     return (
         <a href={pdfLink} target="_blank" rel="noopener noreferrer">
             <div
@@ -13,10 +15,10 @@ const LinksCard: React.FC<LinksCardProps> = ({ logo, title, link, pdfLink }) => 
             >
                 <div className="flex items-center w-full rounded-lg bg-gray-800 shadow-md space-x-2">
                     <div className="flex-shrink-0 rounded-lg">
-                        <img src={logo} alt={title} className="h-24 w-24 rounded-tl-lg rounded-bl-lg" />
+                        <img src={logo} alt={title} className={`rounded-tl-lg rounded-bl-lg ${services ? "h-14 w-14 p-1 filter-white" : "h-24 w-24"} `} />
                     </div>
                     <div className="flex-1">
-                        <h3 className="text-sm font-bold text-white line-clamp-3 mb-2">{title}</h3>
+                        <h3 className="font-bold text-sm text-white line-clamp-3">{title}</h3>
                         <a href={link} target="_blank" rel="noopener noreferrer" className="text-gray-500 text-xs">
                             {link}
                         </a>
@@ -24,8 +26,7 @@ const LinksCard: React.FC<LinksCardProps> = ({ logo, title, link, pdfLink }) => 
                 </div>
             </div>
         </a>
-
     );
-};
+}
 
 export default LinksCard;

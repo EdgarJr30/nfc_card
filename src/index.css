@@ -30,3 +30,7 @@ html {
 /* body {
     @apply bg-zinc-900 text-zinc-50
 } */
+
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(100%);
+}

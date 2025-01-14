@@ -5,6 +5,7 @@ type Project = {
     logoUrl?: string;
     members?: number;
     bgColor?: string;
+    shareButton?: string;
 };
 
 // Mapeo de palabras clave en el nombre del proyecto a logos y colores de redes sociales
